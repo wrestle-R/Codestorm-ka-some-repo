@@ -88,8 +88,6 @@ const testimonials = [
 export function TestimonialsSectionDemo() {
   return (
     <TestimonialsSection
-      title="Join Codestorm"
-      description="Join thousands of developers who are already building the future with our AI platform"
       testimonials={testimonials}
     />
   )

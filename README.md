@@ -1,124 +1,89 @@
 # Anything for ulric
 
-## Preset Color Configurations
+## 🎨 Epic Color Theme Collection
 
-```javascript
-const presetConfigs = [
-  { name: 'Classic', textColor: '#ffffff', backgroundColor: '#000000' },
-  { name: 'Ocean', textColor: '#e0f7ff', backgroundColor: '#0f172a' },
-  { name: 'Sunset', textColor: '#fff7ed', backgroundColor: '#7c2d12' },
-  { name: 'Forest', textColor: '#f0fdf4', backgroundColor: '#14532d' },
-  { name: 'Purple', textColor: '#faf5ff', backgroundColor: '#581c87' },
-  { name: 'Cyber', textColor: '#00ff41', backgroundColor: '#0d0208' },
-  { name: 'Neon Pink', textColor: '#ff10f0', backgroundColor: '#1a0033' },
-  { name: 'Gold Rush', textColor: '#ffd700', backgroundColor: '#2d1b00' },
-  { name: 'Arctic', textColor: '#f0f9ff', backgroundColor: '#0c4a6e' },
-  { name: 'Crimson', textColor: '#fef2f2', backgroundColor: '#7f1d1d' },
-  { name: 'Emerald', textColor: '#ecfdf5', backgroundColor: '#064e3b' },
-  { name: 'Amethyst', textColor: '#fdf4ff', backgroundColor: '#701a75' },
-  { name: 'Steel', textColor: '#f8fafc', backgroundColor: '#334155' },
-  { name: 'Copper', textColor: '#fff7ed', backgroundColor: '#9a3412' },
-  { name: 'Sapphire', textColor: '#eff6ff', backgroundColor: '#1e3a8a' },
-  { name: 'Rose Gold', textColor: '#fef7f0', backgroundColor: '#a16207' },
-  { name: 'Mint', textColor: '#f0fdfa', backgroundColor: '#0f766e' },
-  { name: 'Lavender', textColor: '#faf5ff', backgroundColor: '#7c3aed' },
-  { name: 'Charcoal', textColor: '#f1f5f9', backgroundColor: '#1e293b' },
-  { name: 'Coral', textColor: '#fff1f2', backgroundColor: '#be123c' },
-  { name: 'Jade', textColor: '#ecfccb', backgroundColor: '#365314' },
-  { name: 'Indigo', textColor: '#eef2ff', backgroundColor: '#3730a3' },
-  { name: 'Tangerine', textColor: '#ffedd5', backgroundColor: '#c2410c' },
-  { name: 'Teal', textColor: '#f0fdfa', backgroundColor: '#134e4a' },
-  { name: 'Magenta', textColor: '#fdf2f8', backgroundColor: '#be185d' },
-  { name: 'Olive', textColor: '#f7fee7', backgroundColor: '#365314' },
-  { name: 'Navy', textColor: '#f1f5f9', backgroundColor: '#0f172a' },
-  { name: 'Maroon', textColor: '#fef2f2', backgroundColor: '#881337' },
-  { name: 'Turquoise', textColor: '#ecfeff', backgroundColor: '#155e63' },
-  { name: 'Plum', textColor: '#faf5ff', backgroundColor: '#6b21a8' },
-  { name: 'Bronze', textColor: '#fefce8', backgroundColor: '#92400e' },
-  { name: 'Slate', textColor: '#f8fafc', backgroundColor: '#475569' },
-  { name: 'Crimson Red', textColor: '#ffebee', backgroundColor: '#b71c1c' },
-  { name: 'Deep Blue', textColor: '#e3f2fd', backgroundColor: '#0d47a1' },
-  { name: 'Forest Green', textColor: '#e8f5e8', backgroundColor: '#1b5e20' },
-  { name: 'Royal Purple', textColor: '#f3e5f5', backgroundColor: '#4a148c' },
-  { name: 'Golden Yellow', textColor: '#fffde7', backgroundColor: '#f57f17' },
-  { name: 'Dark Orange', textColor: '#fff3e0', backgroundColor: '#e65100' },
-  { name: 'Deep Teal', textColor: '#e0f2f1', backgroundColor: '#004d40' },
-  { name: 'Hot Pink', textColor: '#fce4ec', backgroundColor: '#ad1457' },
-  { name: 'Lime Green', textColor: '#f9ffe6', backgroundColor: '#33691e' },
-  { name: 'Electric Blue', textColor: '#e1f5fe', backgroundColor: '#0277bd' },
-  { name: 'Sunset Orange', textColor: '#fff8e1', backgroundColor: '#ef6c00' },
-  { name: 'Midnight Blue', textColor: '#e8eaf6', backgroundColor: '#1a237e' },
-  { name: 'Cherry Red', textColor: '#ffebee', backgroundColor: '#c62828' },
-  { name: 'Emerald Green', textColor: '#e0f2e1', backgroundColor: '#2e7d32' },
-  { name: 'Violet', textColor: '#ede7f6', backgroundColor: '#512da8' },
-  { name: 'Amber', textColor: '#fff8e1', backgroundColor: '#ff8f00' },
-  { name: 'Deep Purple', textColor: '#f3e5f5', backgroundColor: '#673ab7' },
-  { name: 'Dark Cyan', textColor: '#e0f7fa', backgroundColor: '#00838f' },
-  { name: 'Burgundy', textColor: '#f3e5f5', backgroundColor: '#880e4f' },
-  { name: 'Neon Green', textColor: '#39ff14', backgroundColor: '#001100' },
-  { name: 'Electric Purple', textColor: '#bf00ff', backgroundColor: '#1a0029' },
-  { name: 'Neon Blue', textColor: '#00bfff', backgroundColor: '#001133' },
-  { name: 'Neon Orange', textColor: '#ff4500', backgroundColor: '#330a00' },
-  { name: 'Neon Yellow', textColor: '#ffff00', backgroundColor: '#333300' },
-  { name: 'Neon Red', textColor: '#ff073a', backgroundColor: '#330007' },
-  { name: 'Neon Cyan', textColor: '#00ffff', backgroundColor: '#003333' },
-  { name: 'Neon Magenta', textColor: '#ff00ff', backgroundColor: '#330033' },
-  { name: 'Matrix Green', textColor: '#00ff00', backgroundColor: '#001100' },
-  { name: 'Terminal Green', textColor: '#33ff33', backgroundColor: '#0a0a0a' },
-  { name: 'Retro Pink', textColor: '#ff69b4', backgroundColor: '#2d1b35' },
-  { name: 'Synthwave', textColor: '#ff00ff', backgroundColor: '#0f0f23' },
-  { name: 'Vaporwave', textColor: '#ff71ce', backgroundColor: '#01cdfe' },
-  { name: 'Miami Vice', textColor: '#ff006e', backgroundColor: '#8338ec' },
-  { name: 'Cyberpunk', textColor: '#ffff00', backgroundColor: '#ff00ff' },
-  { name: 'Outrun', textColor: '#ff073a', backgroundColor: '#39ff14' },
-  { name: 'Blade Runner', textColor: '#00ffff', backgroundColor: '#ff4500' },
-  { name: 'Tron', textColor: '#00bfff', backgroundColor: '#191970' },
-  { name: 'Pastel Pink', textColor: '#8b5cf6', backgroundColor: '#fce7f3' },
-  { name: 'Pastel Blue', textColor: '#3b82f6', backgroundColor: '#dbeafe' },
-  { name: 'Pastel Green', textColor: '#10b981', backgroundColor: '#d1fae5' },
-  { name: 'Pastel Yellow', textColor: '#f59e0b', backgroundColor: '#fef3c7' },
-  { name: 'Pastel Purple', textColor: '#8b5cf6', backgroundColor: '#e9d5ff' },
-  { name: 'Pastel Orange', textColor: '#f97316', backgroundColor: '#fed7aa' },
-  { name: 'Soft Mint', textColor: '#059669', backgroundColor: '#ecfdf5' },
-  { name: 'Baby Blue', textColor: '#0ea5e9', backgroundColor: '#f0f9ff' },
-  { name: 'Peach', textColor: '#ea580c', backgroundColor: '#fff7ed' },
-  { name: 'Lilac', textColor: '#7c3aed', backgroundColor: '#f5f3ff' },
-  { name: 'Cream', textColor: '#92400e', backgroundColor: '#fffbeb' },
-  { name: 'Seafoam', textColor: '#047857', backgroundColor: '#f0fdfa' },
-  { name: 'Mars Red', textColor: '#ffffff', backgroundColor: '#cd5c5c' },
-  { name: 'Jupiter Orange', textColor: '#000000', backgroundColor: '#ff8c00' },
-  { name: 'Saturn Gold', textColor: '#000000', backgroundColor: '#ffd700' },
-  { name: 'Neptune Blue', textColor: '#ffffff', backgroundColor: '#4682b4' },
-  { name: 'Venus Yellow', textColor: '#000000', backgroundColor: '#ffff99' },
-  { name: 'Mercury Silver', textColor: '#000000', backgroundColor: '#c0c0c0' },
-  { name: 'Pluto Black', textColor: '#ffffff', backgroundColor: '#2f4f4f' },
-  { name: 'Galaxy Purple', textColor: '#ffffff', backgroundColor: '#483d8b' },
-  { name: 'Nebula Pink', textColor: '#ffffff', backgroundColor: '#db7093' },
-  { name: 'Cosmic Blue', textColor: '#ffffff', backgroundColor: '#191970' },
-  { name: 'Solar Flare', textColor: '#000000', backgroundColor: '#ff6347' },
-  { name: 'Starlight', textColor: '#000000', backgroundColor: '#f5f5dc' },
-  { name: 'Victorian Red', textColor: '#fdf2f8', backgroundColor: '#7f1d1d' },
-  { name: 'Victorian Blue', textColor: '#eff6ff', backgroundColor: '#1e3a8a' },
-  { name: 'Victorian Green', textColor: '#f0fdf4', backgroundColor: '#14532d' },
-  { name: 'Victorian Purple', textColor: '#faf5ff', backgroundColor: '#581c87' },
-  { name: 'Victorian Gold', textColor: '#fffbeb', backgroundColor: '#92400e' },
-  { name: 'Art Deco', textColor: '#ffd700', backgroundColor: '#000000' },
-  { name: 'Vintage Rose', textColor: '#fff1f2', backgroundColor: '#be123c' },
-  { name: 'Antique Brass', textColor: '#fffbeb', backgroundColor: '#a16207' },
-  { name: 'Old Money', textColor: '#f8fafc', backgroundColor: '#1e293b' },
-  { name: 'Sepia', textColor: '#a0522d', backgroundColor: '#fdf6e3' },
-  { name: 'Retro Orange', textColor: '#ffedd5', backgroundColor: '#ea580c' },
-  { name: 'Vintage Teal', textColor: '#f0fdfa', backgroundColor: '#0f766e' },
-  { name: 'Autumn Maple', textColor: '#ffedd5', backgroundColor: '#9a3412' },
-  { name: 'Winter Frost', textColor: '#f0f9ff', backgroundColor: '#0c4a6e' },
-  { name: 'Spring Bloom', textColor: '#fdf2f8', backgroundColor: '#be185d' },
-  { name: 'Summer Sun', textColor: '#fefce8', backgroundColor: '#ca8a04' },
-  { name: 'Desert Sand', textColor: '#451a03', backgroundColor: '#fef3c7' },
-  { name: 'Ocean Depth', textColor: '#f0f9ff', backgroundColor: '#0369a1' },
-  { name: 'Mountain Peak', textColor: '#f8fafc', backgroundColor: '#475569' },
-  { name: 'Forest Floor', textColor: '#f7fee7', backgroundColor: '#365314' },
-  { name: 'Sunset Sky', textColor: '#fff7ed', backgroundColor: '#c2410c' },
-  { name: 'Dawn Light', textColor: '#fefce8', backgroundColor: '#eab308' },
-  { name: 'Midnight Sky', textColor: '#f1f5f9', backgroundColor: '#0f172a' }
-];
-```
+### 🌟 Classic & Essential Themes
+- **Classic** → `#ffffff` on `#000000` → Pure white text on midnight black
+- **Ocean** → `#e0f7ff` on `#0f172a` → Soft blue waves against deep navy
+- **Sunset** → `#fff7ed` on `#7c2d12` → Warm cream over rich brown earth
+- **Forest** → `#f0fdf4` on `#14532d` → Fresh mint on deep emerald woods
+- **Purple** → `#faf5ff` on `#581c87` → Soft lavender on royal purple
+
+### 🚀 Futuristic & Neon Vibes
+- **Cyber** → `#00ff41` on `#0d0208` → Electric green matrix on void black
+- **Neon Pink** → `#ff10f0` on `#1a0033` → Hot magenta pulse in purple shadows
+- **Matrix Green** → `#00ff00` on `#001100` → Classic terminal green glow
+- **Terminal Green** → `#33ff33` on `#0a0a0a` → Bright console green on dark screen
+- **Synthwave** → `#ff00ff` on `#0f0f23` → Purple electric dreams
+- **Cyberpunk** → `#ffff00` on `#ff00ff` → Yellow lightning on magenta storm
+- **Blade Runner** → `#00ffff` on `#ff4500` → Cyan rain on orange horizon
+- **Tron** → `#00bfff` on `#191970` → Blue digital grid world
+
+### 💎 Precious & Metallic
+- **Gold Rush** → `#ffd700` on `#2d1b00` → Shimmering gold on rich brown
+- **Rose Gold** → `#fef7f0` on `#a16207` → Elegant peach gold warmth
+- **Mercury Silver** → `#000000` on `#c0c0c0` → Clean mercury shine
+- **Bronze** → `#fefce8` on `#92400e` → Ancient copper patina
+- **Steel** → `#f8fafc` on `#334155` → Industrial gray strength
+- **Copper** → `#fff7ed` on `#9a3412` → Warm metallic copper glow
+
+### 🌈 Vibrant & Electric
+- **Electric Blue** → `#e1f5fe` on `#0277bd` → Brilliant sky energy
+- **Electric Purple** → `#bf00ff` on `#1a0029` → Cosmic violet power
+- **Neon Orange** → `#ff4500` on `#330a00` → Blazing sunset fire
+- **Neon Yellow** → `#ffff00` on `#333300` → Solar flare intensity
+- **Hot Pink** → `#fce4ec` on `#ad1457` → Passionate rose explosion
+- **Neon Red** → `#ff073a` on `#330007` → Intense crimson energy
+
+### 🎭 Retro & Vintage Aesthetics  
+- **Art Deco** → `#ffd700` on `#000000` → Golden luxury on black elegance
+- **Victorian Red** → `#fdf2f8` on `#7f1d1d` → Royal crimson heritage
+- **Vintage Rose** → `#fff1f2` on `#be123c` → Classic romantic charm
+- **Sepia** → `#a0522d` on `#fdf6e3` → Nostalgic brown memories
+- **Old Money** → `#f8fafc` on `#1e293b` → Sophisticated gray wealth
+- **Antique Brass** → `#fffbeb` on `#a16207` → Aged golden brass
+- **Retro Orange** → `#ffedd5` on `#ea580c` → Classic 70s vibe
+
+### 🌸 Soft & Pastel Dreams
+- **Pastel Pink** → `#8b5cf6` on `#fce7f3` → Gentle purple on soft rose
+- **Baby Blue** → `#0ea5e9` on `#f0f9ff` → Tender sky on cloud white
+- **Soft Mint** → `#059669` on `#ecfdf5` → Fresh green whisper
+- **Lilac** → `#7c3aed` on `#f5f3ff` → Delicate purple mist
+- **Peach** → `#ea580c` on `#fff7ed` → Sweet orange blush
+- **Cream** → `#92400e` on `#fffbeb` → Warm vanilla comfort
+
+### 🪐 Cosmic & Space Themes
+- **Mars Red** → `#ffffff` on `#cd5c5c` → Rusty planet surface
+- **Jupiter Orange** → `#000000` on `#ff8c00` → Giant storm swirls  
+- **Saturn Gold** → `#000000` on `#ffd700` → Ring planet majesty
+- **Neptune Blue** → `#ffffff` on `#4682b4` → Ice giant depths
+- **Galaxy Purple** → `#ffffff` on `#483d8b` → Deep space mystery
+- **Cosmic Blue** → `#ffffff` on `#191970` → Infinite universe
+- **Solar Flare** → `#000000` on `#ff6347` → Star explosion energy
+- **Starlight** → `#000000` on `#f5f5dc` → Celestial glow
+
+### 🍂 Natural & Seasonal
+- **Autumn Maple** → `#ffedd5` on `#9a3412` → Fall leaf warmth
+- **Winter Frost** → `#f0f9ff` on `#0c4a6e` → Ice crystal blue
+- **Spring Bloom** → `#fdf2f8` on `#be185d` → Fresh pink awakening
+- **Summer Sun** → `#fefce8` on `#ca8a04` → Golden heat waves
+- **Desert Sand** → `#451a03` on `#fef3c7` → Warm dune colors
+- **Ocean Depth** → `#f0f9ff` on `#0369a1` → Deep sea blue
+- **Mountain Peak** → `#f8fafc` on `#475569` → Rocky gray heights
+- **Forest Floor** → `#f7fee7` on `#365314` → Earth and moss tones
+
+### 🌆 Urban & Miami Vice
+- **Miami Vice** → `#ff006e` on `#8338ec` → Pink neon city nights
+- **Vaporwave** → `#ff71ce` on `#01cdfe` → Retro pink and cyan dreams
+- **Outrun** → `#ff073a` on `#39ff14` → Red and green speed lines
+- **Retro Pink** → `#ff69b4` on `#2d1b35` → 80s nostalgia vibes
+
+### 💠 Precious Stones & Gems
+- **Emerald** → `#ecfdf5` on `#064e3b` → Deep forest emerald
+- **Sapphire** → `#eff6ff` on `#1e3a8a` → Royal blue sapphire
+- **Amethyst** → `#fdf4ff` on `#701a75` → Purple crystal clarity
+- **Ruby** → `#fef2f2` on `#7f1d1d` → Blood red ruby fire
+
+*Over 100+ handcrafted themes with precise hex color codes for every mood and vibe* ✨
+
+---

@@ -426,4 +426,3 @@ function MobileNavItem({
 }
 
 export { Hero2 };
-export { Hero2 };

@@ -1,6 +1,5 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import Landing1 from './pages/Landing1'
 import Landing2 from './pages/Landing2'
 
 

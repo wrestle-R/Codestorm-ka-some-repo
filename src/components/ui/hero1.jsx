@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ArrowRight, Menu, X, Search } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import { TestimonialsSectionDemo } from "@/components/ui/testimonials-with-marquee";
 
 const Hero2 = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -162,7 +163,7 @@ const Hero2 = () => {
         {/* Navigation */}
         <nav
           className="container mx-auto flex items-center justify-between px-4 py-4 mt-6">
-          <div className="flex items-center">
+          <div className="flex items-center scale-150 pl-0 md:pl-16 justify-center md:justify-start w-full md:w-auto">
             <button
               onClick={() => setPresetModalOpen(true)}
               className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-black overflow-hidden hover:scale-110 transition-transform duration-200 cursor-pointer"
@@ -173,7 +174,8 @@ const Hero2 = () => {
                 className="h-8 w-8 object-contain"
               />
             </button>
-            <span className="ml-2 text-xl font-montserrat text-white">CodeStorm</span>
+            <span className="ml-2 text-xl font-inter text-white" style={{ fontWeight: '900' }}>Code</span>
+            <span className="text-xl font-inter text-orange-500" style={{ fontWeight: '900' }}>Storm</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -218,7 +220,7 @@ const Hero2 = () => {
                     className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-black">
                     <span className="font-bold"></span>
                   </div>
-                  <span className="ml-2 text-xl font-montserrat text-white">
+                  <span className="ml-2 text-xl font-inter text-white" style={{ fontWeight: '900' }}>
                     CodeStorm
                   </span>
                 </div>
@@ -269,7 +271,7 @@ const Hero2 = () => {
               >
                 {/* Header */}
                 <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-xl font-montserrat font-bold text-white">
+                  <h2 className="text-xl font-inter font-bold text-white">
                     Choose Theme
                   </h2>
                   <button
@@ -288,7 +290,7 @@ const Hero2 = () => {
                     placeholder="Search themes..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-9 pr-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white font-montserrat text-sm placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/30"
+                    className="w-full pl-9 pr-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white font-inter text-sm placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/30"
                   />
                 </div>
 
@@ -308,7 +310,7 @@ const Hero2 = () => {
                         >
                           Aa
                         </div>
-                        <p className="text-xs font-montserrat text-white text-center truncate">
+                        <p className="text-xs font-inter text-white text-center truncate">
                           {preset.name}
                         </p>
                         
@@ -327,19 +329,19 @@ const Hero2 = () => {
                   
                   {filteredPresets.length === 0 && (
                     <div className="text-center py-8">
-                      <p className="text-white/60 font-montserrat text-sm">No themes found matching "{searchTerm}"</p>
+                      <p className="text-white/60 font-inter text-sm">No themes found matching "{searchTerm}"</p>
                     </div>
                   )}
                 </div>
 
                 {/* Footer */}
                 <div className="mt-4 pt-4 border-t border-white/20 flex flex-col gap-3">
-                  <p className="text-xs text-white/60 font-montserrat text-center">
+                  <p className="text-xs text-white/60 font-inter text-center">
                     {filteredPresets.length} theme{filteredPresets.length !== 1 ? 's' : ''} available
                   </p>
                   <button
                     onClick={() => applyPreset(presetConfigs[0])}
-                    className="w-full px-4 py-2 bg-white/20 hover:bg-white/30 text-white font-montserrat font-medium rounded-lg transition-all duration-200 border border-white/30 hover:border-white/50 text-sm"
+                    className="w-full px-4 py-2 bg-white/20 hover:bg-white/30 text-white font-inter font-medium rounded-lg transition-all duration-200 border border-white/30 hover:border-white/50 text-sm"
                   >
                     Reset to Classic
                   </button>
@@ -363,14 +365,19 @@ const Hero2 = () => {
           
    <h1
   className="mx-auto max-w-4xl text-8xl font-bold leading-[0.8] text-white md:text-9xl lg:text-9xl"
-  style={{ color: textColor }}>
+  style={{ color: textColor, fontFamily: 'Pirata One, sans-serif' }}>
   ESCAPE
 </h1>
 <h1
   className="mx-auto max-w-4xl text-8xl font-bold leading-[0.8] text-white md:text-9xl lg:text-9xl"
-  style={{ color: textColor }}>
+  style={{ color: textColor, fontFamily: 'Pirata One, sans-serif' }}>
   ROOM
 </h1>
+
+          {/* Testimonials Section */}
+          <div className="mt-4">
+            <TestimonialsSectionDemo />
+          </div>
 
           <div
             className="mt-10 flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">

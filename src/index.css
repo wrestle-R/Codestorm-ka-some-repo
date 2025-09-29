@@ -1,20 +1,24 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "@fontsource/pirata-one";
-@import "@fontsource/montserrat"; 
+@import "@fontsource/montserrat";
+@import "@fontsource/inter"; 
 
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
-    font-family: "Pirata One", sans-serif;
+    font-family: "Pirata One", sans-serif, "Inter";
   }
   body {
     @apply bg-background text-foreground;
-    font-family: "Pirata One", sans-serif;
+    font-family: "Pirata One", sans-serif, "Inter";
   }
-  .font-montserrat {
+    .font-montserrat {
     font-family: "Montserrat", sans-serif;
+  }
+  .font-inter {
+    font-family: "Inter", sans-serif;
   }
 }
 
@@ -125,5 +129,31 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.552 0.016 285.938);
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-reverse {
+  from {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee {
+  animation: marquee var(--duration) infinite linear;
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse var(--duration) infinite linear;
 }
 

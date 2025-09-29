@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/inter": "^5.2.8",
     "@fontsource/montserrat": "^5.2.8",
     "@fontsource/pirata-one": "^5.2.8",
     "@tailwindcss/vite": "^4.1.13",
